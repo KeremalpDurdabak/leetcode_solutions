@@ -4,9 +4,7 @@ public:
         int maxWealth = 0;
         for(vector<int> c : accounts){
             int cWealth = std::accumulate(c.begin(),c.end(), 0);
-            if(cWealth > maxWealth){
-                maxWealth = cWealth;
-            }
+            maxWealth = max(maxWealth, cWealth);
         }
         return maxWealth;
     }
